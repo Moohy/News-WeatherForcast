@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Made with Thimble</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+            crossorigin="anonymous"></script>
+    <script src="News.js"></script>
+    <nav>
+      <label class="srcOp">Choose your source </label> 
+      <select required id="srcOp" name="srcOp">
+        <option></option>
+      </select>
+    </nav>
+    <div id="sort">
+      <label class="sortLabel">Sort </label> 
+      <select  id="sortBy">
+        <option data-status="top">Top</option>
+        <option data-status="latest">Latest</option>
+        <option data-status="popular">Popular</option>
+      </select>
+    </div>
+    <div id="articles"></div>
+  </body>
+</html>

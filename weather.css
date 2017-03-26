@@ -1,0 +1,8 @@
+#currentWeather {
+  display: flex;
+  flex-direction: row;
+}
+
+div {
+  border: 1px solid;
+}

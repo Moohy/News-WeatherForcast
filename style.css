@@ -1,0 +1,50 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.theImage {
+  max-height: inherit;
+  max-width: 100%;
+}
+
+.article {
+  display: flex;
+  align-items: flex-start;
+  display: block;
+  padding-top: 10px;
+}
+
+.description span {
+  font-size: 13px;
+}
+
+.title span {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.url { 
+  font-size: 10px;
+  padding-bottom: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: hsl(110, 30%, 60%);
+  padding-top: 10px;
+  padding-bottom: 2px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#sort {
+  display: flex;
+  justify-content: center;
+  padding-top: 45px; 
+}

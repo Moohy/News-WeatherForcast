@@ -11,7 +11,13 @@ $(document).ready(function() {
 
   //This requests the sources that will be listed on the select element
   jQuery.ajax(SOURCES, requestSource)
+  requestArticles("cnbc", "top")
   
+  $('#sortBy').change(function(){
+    $('#articles').empty()
+    requestArticles($('#srcOp option:selected').data('status'), $('#sortBy option:selected').data('status'))
+    console.log($('#srcOp option:selected').data('status'))
+  });
   //Articles' of a specific source request function
   $('#srcOp').change(function(){
     var optionChosen = $('#srcOp option:selected').data('status')
@@ -19,11 +25,7 @@ $(document).ready(function() {
     console.log("option")
     $('#articles').empty()
     requestArticles($('#srcOp option:selected').data('status'), "top")
-    $('#sortBy').change(function(){
-      $('#articles').empty()
-      requestArticles($('#srcOp option:selected').data('status'), $('#sortBy option:selected').data('status'))
-      console.log($('#srcOp option:selected').data('status'))
-    });
+    
   });
   
 })
@@ -45,11 +47,11 @@ function sourceSuccess(data, textStatus, jqXHR) {
 }
 
 
-function requestArticles(sources, sort) {
+function requestArticles(source, sort) {
   console.log("search")
   var requestSettings = {
     data :{
-      source : sources,
+      source : source,
       sortBy : sort,
       apiKey : ACCESS_TOKEN
 

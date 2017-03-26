@@ -12,13 +12,26 @@
             crossorigin="anonymous"></script>
     <script src="News.js"></script>
     <nav>
-      <label class="srcOp">Choose your source </label> 
-      <select required id="srcOp" name="srcOp">
+      <div class="dropdown">
+        <button class="dropbtn">Preference</button>
+        <div class="dropdown-content">
+          <div id="drp">News Source
+            <select required id="srcOp" name="srcOp">
+              <option></option>
+            </select>
+          </div>
+          <a id="drp" href="#">Sort By</a>
+        </div>
+      </div>
+      <!--
+      <div class="srcOp">Choose your source </div> 
+      <select required id="srcOp1" name="srcOp1">
         <option></option>
       </select>
+      -->
     </nav>
     <div id="sort">
-      <label class="sortLabel">Sort </label> 
+      <div class="sortLabel">Sort By  </div> 
       <select  id="sortBy">
         <option data-status="top">Top</option>
         <option data-status="latest">Latest</option>
